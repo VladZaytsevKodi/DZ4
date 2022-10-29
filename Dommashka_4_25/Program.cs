@@ -8,7 +8,26 @@ int a = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите число В: ");
 int b = int.Parse(Console.ReadLine()!);
 
-if(b>=0)
+
+int i = b;
+while (i > 0)
+{  
+   Console.WriteLine($"A^B= {Math.Pow(a, i)}");
+   break;
+}
+
+while (i < 0)
+{  
+   i *= -1; 
+   Console.WriteLine($"A^B= {Math.Pow(a, i)}");
+   break;
+}
+
+
+
+
+
+/*if(b>=0)
 {
 Console.WriteLine($"A^B= {Math.Pow(a, b)}");
 }
@@ -17,4 +36,4 @@ if(b<0)
 {
 int bi = b * -1; 
 Console.WriteLine($"A^B= {Math.Pow(a, bi)}");
-}
+}*/

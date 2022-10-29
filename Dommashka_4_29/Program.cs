@@ -1,26 +1,12 @@
 ﻿// Напишите программу, которая создает массив из некоторого количества элеентов
-// и выводит их на экран с помощью функции.
+// и выводит их на экран с помощью функции.Создать рандоный массив из 8 элементов.
 
 Console.Clear();
+int maxValue = 100;
+int[] array = new int[8];
+Random r = new Random();
+for (int i = 0; i < 8; i++)
+array [i] = r.Next(0, maxValue); 
+Console.WriteLine($"array: {array[0]}, {array[1]}, {array[2]}, {array[3]}, {array[4]}, {array[5]}, {array[6]}, {array[7]}");
+//Console.WriteLine(array[r.Next(0, maxValue)]); почему не работает такая формула вывода в консоль?
 
-/*Console.WriteLine("Введите первый элемент массива: ");
-int[i] intArray = int.Parse(Console.ReadLine()!);
-
-Console.WriteLine("Введите второй элемент массива: ");
-int[i] intArray = int.Parse(Console.ReadLine()!);
-
-Console.WriteLine("Введите третий элемент массива: ");
-int[i] intArray = int.Parse(Console.ReadLine()!);
-
-Console.WriteLine(intArray);*/
-//int[i] intArray = new int[3]
-
-
-int i = 5;
-int[] A = new int [i];
-
-if(i > 0)
-{
-A[i] = Convert.ToInt32(Console.ReadLine());
-i=i+1;
-}
