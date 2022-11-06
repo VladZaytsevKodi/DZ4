@@ -2,11 +2,22 @@
 // и выводит их на экран с помощью функции.Создать рандоный массив из 8 элементов.
 
 Console.Clear();
-int maxValue = 100;
-int[] array = new int[8];
+Console.WriteLine("Введите колиество элементов массива: ");
+int х = int.Parse(Console.ReadLine()!);
+
+Console.WriteLine("Введите минимальное число элемента массива: ");
+int minValue = int.Parse(Console.ReadLine()!);
+
+Console.WriteLine("Введите максимальное число элемента массива: ");
+int maxValue = int.Parse(Console.ReadLine()!);
+
+
+int[] array = new int [х];
 Random r = new Random();
-for (int i = 0; i < 8; i++)
-array [i] = r.Next(0, maxValue); 
-Console.WriteLine($"array: {array[0]}, {array[1]}, {array[2]}, {array[3]}, {array[4]}, {array[5]}, {array[6]}, {array[7]}");
-//Console.WriteLine(array[r.Next(0, maxValue)]); почему не работает такая формула вывода в консоль?
+for (int i = 0; i <= maxValue; i++)
+{
+   array [i] = r.Next(minValue, maxValue + 1); 
+   Console.Write($"{array[i]}, ");
+}
+
 
